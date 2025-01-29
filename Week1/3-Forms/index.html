@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+    
+        form {
+            width: 400px;
+            padding: 25px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        input, select, textarea {
+            margin: 2%;
+        }
+
+        button {
+            margin-top: 5%;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <form>
+        <!-- Name -->
+        <label for="fname">Name: </label>
+        <input type="text" id="fname" name="fname" required>
+        <br>
+        <label for="lname">Surname: </label>
+        <input type="text" id="lname" name="lname" required>
+        <br>
+        
+        <!-- Email -->
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <!-- Password -->
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" required>
+        <br>
+
+        <!-- Radio -->
+        <label for="gender">Gender</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label>
+        <br>
+
+        <!-- Select -->
+        <label for="fruit">Favorite Fruit:</label>
+        <select name="fruit" id="fruit" required>
+            <!-- Placeholder for select -->
+            <option value="" selected disabled>Please Select</option> 
+            <option value="apple">Apple</option>
+            <option value="banana">Banana</option>
+            <option value="strawberry">Strawberry</option>
+            <option value="watermelon">Watermelon</option>
+        </select>
+        <br>
+
+        <!-- Text Area -->
+        <label for="message">Text Area:</label>
+        <textarea name="message" id="message" rows="4" maxlength="100" placeholder="Write something..." required></textarea>
+        <br>
+        <!-- Submit Button -->
+        <button type="submit" value="create">Create</button>
+        <button type="reset">Clear</button>
+    </form>
+
+</body>
+</html>
