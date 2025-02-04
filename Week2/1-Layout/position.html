@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Özellikleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            position: relative;
+            width: 80%;
+            margin: auto;
+            border: 2px solid black;
+            padding: 20px;
+        }
+        .box {
+            width: 150px;
+            height: 100px;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+        .static {
+            background-color: gray;
+            position: static;
+        }
+        .relative {
+            background-color: blue;
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+        .absolute {
+            background-color: red;
+            position: absolute;
+            top: 50px;
+            right: 50px;
+        }
+        .fixed {
+            background-color: green;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+        .sticky {
+            background-color: orange;
+            position: sticky;
+            top: 0  ;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Position Özellikleri</h2>
+    <div class="container">
+        <div class="box static">Static</div>
+        <div class="box relative">Relative</div>
+        <div class="box absolute">Absolute</div>
+        <div class="box fixed">Fixed</div>
+        <div class="box sticky">Sticky</div>
+    </div>
+    <p>Sayfayı aşağı kaydırarak "fixed" ve "sticky" öğelerinin nasıl çalıştığını gözlemleyebilirsiniz.</p>
+    <p style="height: 1500px;"></p>
+</body>
+</html>

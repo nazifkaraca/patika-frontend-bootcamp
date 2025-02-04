@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .display {
+            background-color: dodgerblue;
+        }
+
+        .inline {
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            display: inline;
+        }
+
+        .inline-block {
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .block {
+            display: block;
+        }
+
+        .none {
+            display: none;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+
+        .flex {
+            max-width: 550px;
+            display: flex;
+            gap: 20px;
+            padding: 10px;
+            background-color: mediumpurple;
+        }
+
+        .flex div {
+            width: 75px;
+            font-size: 32px;
+            text-align: center;
+            line-height: 75px;
+            background-color: white;
+        }
+
+        .grid {
+            display: grid;
+            gap: 10px;
+            padding: 10px;
+            background-color: coral;
+        }
+
+        .grid div {
+            font-size: 32px;
+            line-height: 75px;
+            text-align: center;
+            background-color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>CSS Display</h1>
+    <h2>display: inline;</h2>
+    <p>Lorem ipsum dolor sit amet, <span class="display inline">consectetur</span> adipisicing elit. Nihil, repellat! Nihil accusantium quia alias fugiat, quaerat rem molestias recusandae odio sint deleniti ullam nam aspernatur dolorem molestiae ut consectetur eum.</p>
+
+    <h2>display: inline-block;</h2>
+    <p>Lorem ipsum dolor sit amet <span class="display inline-block">consectetur</span> adipisicing elit. Commodi fugiat iusto officiis aliquid eius nulla repellat ratione tempora! Molestiae eaque voluptates culpa veritatis aut? Dolorem nobis a tempora soluta fugiat.</p>
+
+    <h2>display: block;</h2>
+    <p>Lorem ipsum dolor sit amet <span class="display block">consectetur</span> adipisicing elit. Commodi fugiat iusto officiis aliquid eius nulla repellat ratione tempora! Molestiae eaque voluptates culpa veritatis aut? Dolorem nobis a tempora soluta fugiat.</p>
+
+    <h2>display: none;</h2>
+    <p>Lorem ipsum dolor sit amet <span class="none">consectetur</span> adipisicing elit. Commodi fugiat iusto officiis aliquid eius nulla repellat ratione tempora! Molestiae eaque voluptates culpa veritatis aut? Dolorem nobis a tempora soluta fugiat.</p>
+
+    <h2>visibility: hidden;</h2>
+    <p>Lorem ipsum dolor sit amet <span class="hidden">consectetur</span> adipisicing elit. Commodi fugiat iusto officiis aliquid eius nulla repellat ratione tempora! Molestiae eaque voluptates culpa veritatis aut? Dolorem nobis a tempora soluta fugiat.</p>
+
+    <h2>display: flex;</h2>
+    <h3>Container</h3>
+    <div class="flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h3>The flex-direction Property</h3>
+    <div class="flex" style="flex-direction: row; flex-wrap: wrap;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <!-- Horizontal aligment of the elements -->
+    <h3>The justify-content Property</h3>
+    <div class="flex" style="justify-content: space-evenly;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+    <!-- Align content takes all items in the container -->
+    <h3>The align-content Property</h3>
+    <div class="flex" style="height: 200px; flex-wrap: wrap; align-content: start;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+    <!-- Align item takes only row items -->
+    <h3>The align-items Property</h3>
+    <div class="flex" style="height: 200px; flex-wrap: wrap; align-items: start;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+    <!-- Orders element in the container -->
+    <h3>The order Property</h3>
+    <div class="flex">
+        <div style="order: 3">3</div>
+        <div style="order: 1">1</div>
+        <div style="order: 4">4</div>
+        <div style="order: 2;">2</div>
+    </div>
+
+    <!-- Element takes space more than others -->
+    <h3>The flex-grow Property</h3>
+    <div class="flex">
+        <div>3</div>
+        <div>1</div>
+        <div style="flex-grow: 1">4</div>
+        <div>2</div>
+    </div>
+
+    <!-- Element takes space less than others -->
+    <h3>The flex-shrink Property</h3>
+    <div class="flex">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-shrink: 0;">3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+    <!-- Flex-basis changes based on direction (flexible) -->
+    <h3>The flex-basis Property</h3>
+    <div class="flex" style="flex-direction: column;">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-basis: 200px;">3</div>
+        <div>4</div>
+    </div>
+    <br>
+    <div class="flex">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-basis: 200px;">3</div>
+        <div>4</div>
+    </div>
+
+    <!-- Only effects element itself -->
+    <h3>The align-self Property</h3>
+    <div class="flex" style="height: 200px; align-items: start;">
+        <div>1</div>
+        <div>2</div>
+        <div style="align-self: end;">3</div>
+        <div>4</div>
+    </div>
+
+    <!-- GRID -->
+    <h2>display: grid;</h2>
+    <h3>Container</h3>
+    <div class="grid">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h3>The grid-template-columns Property</h3>
+    <div class="grid" style="grid-template-columns: auto auto auto;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+
+    <h3>The grid-template-rows Property</h3>
+    <div class="grid" style="grid-template-rows: auto auto 200px;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+
+    <h3>The grid-column Property</h3>
+    <div class="grid" style="grid-template-columns: auto auto auto;">
+        <div style="grid-column: 1 / span 2;">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+
+    <h3>The grid-row Property</h3>
+    <div class="grid" style="grid-template-rows: auto auto auto;">
+        <div style="grid-row: 1 / span 2;">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+
+
+
+    <div style="height: 2000px;"></div>
+</body>
+</html>
