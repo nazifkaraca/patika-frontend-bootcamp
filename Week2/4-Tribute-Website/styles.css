@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #4a5964;
+    color: #fff;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+.site-title {
+    font-size: 2em;
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    display: flex;
+    align-items: center; /* Dikey hizalama */
+    justify-content: center; /* Yatay hizalama */
+    text-align: center;
+    padding: 50px 0;
+    flex-direction: column; /* İçerikleri dikey hizalar */
+}
+
+.hero-content {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    max-width: 80%;
+    margin-top: 2%;
+}
+
+blockquote {
+    font-size: 1.5em;
+    font-style: italic;
+    color: #eee;
+}
+
+.biography {
+    background: #b08989;
+    padding: 40px;
+}
+
+.book-list {
+    background: #607d8b;
+    padding: 40px;
+}
+
+.book-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.book-list li {
+    font-size: 1.2em;
+    padding: 5px 0;
+}
+
+footer {
+    background: #333;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.author-image {
+    position: relative;
+    opacity: 0.6;
+    border-radius: 50px;
+    width: 350px;
+}
