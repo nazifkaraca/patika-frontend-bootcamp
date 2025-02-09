@@ -1,0 +1,82 @@
+.container,
+.container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row.center {
+    align-items: center;
+}
+
+/* Implement style all properties starting with col */
+[class*="col-"] {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* Screen div alignment */
+.col-xs {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+}
+
+.col-xs-1 {
+    flex-basis: 8.3%;
+}
+
+.col-xs-2 {
+    flex-basis: 16.6%;
+}
+
+.col-xs-3 {
+    flex-basis: 25%;
+}
+
+.col-xs-4 {
+    flex-basis: 33.3%;
+}
+
+.col-xs-5 {
+    flex-basis: 41.6%;
+}
+
+.col-xs-6 {
+    flex-basis: 50%;
+}
+
+.col-xs-7 {
+    flex-basis: 58.3%;
+}
+
+.col-xs-8 {
+    flex-basis: 66.6%;
+}
+
+.col-xs-9 {
+    flex-basis: 75%;
+}
+
+.col-xs-10 {
+    flex-basis: 83.3%;
+}
+
+.col-xs-11 {
+    flex-basis: 91.6%;
+}
+
+.col-xs-12 {
+    flex-basis: 100%;
+}
+
+

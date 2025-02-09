@@ -1,0 +1,17 @@
+:root {
+    --primary-color: brown;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", serif;
+    color: #282828;
+    background-color: whitesmoke;
+}
+
+p {
+    color: #484848;
+}
