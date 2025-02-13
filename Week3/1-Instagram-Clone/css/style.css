@@ -1,0 +1,118 @@
+* {
+  background-color: #ffff;
+}
+
+::placeholder {
+  text-align: center;
+  font-size: 14px;
+  background-position: 40%;
+  background-size: 6%;
+  background-image: url("../assets/search-solid.svg");
+  background-repeat: no-repeat;
+  padding-left: 5px;
+}
+
+input.empty {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  background-color: #fafafa;
+}
+
+.postuserfont {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  color: black;
+}
+
+.card-body {
+  padding-top: 0;
+}
+
+.card-body.stories > a {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 5px;
+  height: 88px;
+  width: 70px;
+  padding-top: 0.5rem;
+}
+
+.storyphoto {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid rgb(238, 39, 82);
+}
+
+.storytext {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  color: black;
+}
+
+.rightpanellinks {
+  text-decoration: none;
+  color: lightgrey;
+}
+
+.rightpanellinks:hover {
+  text-decoration: none;
+  color: lightgrey;
+}
+
+/* NAVBAR START */
+.navbar {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  background-color: #fafafa;
+  width: 100vw;
+  height: 54px;
+}
+
+.logo {
+  margin-left: 192px;
+}
+
+.collapse.navbar-collapse {
+  display: flex;
+  margin-left: 5px;
+}
+
+/* NAVBAR END */
+
+/* MAIN SECTION */
+.container.middlearea {
+  padding-top: 64px;
+  max-height: 200px !important;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white !important;
+}
+
+.list-group.list-group-horizontal {
+  border: none;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: white !important;
+}
+
+#sticky-sidebar {
+  position: sticky;
+  top: 8.4vh;
+  background-color: white;
+  border: none;
+}
