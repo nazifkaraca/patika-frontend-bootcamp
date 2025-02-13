@@ -2,6 +2,8 @@
 
 Welcome to the **Tribute Website** dedicated to the legendary Turkish author **İhsan Oktay Anar**! 📖✨ This project showcases his life, literary works, and a memorable quote in an elegant and visually appealing format.
 
+![image](https://github.com/user-attachments/assets/af0b1e9b-ac0b-48ed-8e03-e67fa91069b5)
+
 ## 🎨 Features
 
 ✅ **Responsive Design** - Fully adaptable to different screen sizes 📱💻<br>
