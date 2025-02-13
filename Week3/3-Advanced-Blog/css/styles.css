@@ -1,0 +1,88 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav-item {
+  font-size: 1.2rem;
+}
+
+.card {
+  margin: 5%;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  border-radius: 15%;
+  width: 25rem;
+}
+
+.container-fluid.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  height: auto;
+  background-color: orange;
+}
+
+.col-md-6.social-img {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.col-md-6.social-accounts {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: end;
+}
+
+.fa-brands:hover {
+  color: #474747;
+}
+
+.fa-brands {
+  margin: 1rem;
+}
+
+.button-up:hover {
+  background-color: #555; /* Hover olduğunda renk değişimi */
+}
+
+.button-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 25%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out;
+  padding: 1%;
+}
+
+@media (max-width: 768px) {
+  /* XS - Small screens */
+  .col-md-6.social-img,
+  .col-md-6.social-accounts {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+}
