@@ -1,7 +1,3 @@
-* {
-  background-color: #ffff;
-}
-
 ::placeholder {
   text-align: center;
   font-size: 14px;
@@ -25,6 +21,10 @@ input.empty {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 15px;
   color: black;
+}
+
+.card {
+  border: none;
 }
 
 .card-body {
@@ -98,6 +98,7 @@ input.empty {
   align-items: center;
   justify-content: space-between;
   background-color: white !important;
+  padding-left: 0;
 }
 
 .list-group.list-group-horizontal {
