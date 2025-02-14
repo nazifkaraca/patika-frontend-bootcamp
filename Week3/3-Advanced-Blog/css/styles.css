@@ -1,5 +1,7 @@
 body {
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
 }
 
 .nav-item {
@@ -31,13 +33,14 @@ img {
   align-items: center;
   min-height: 80vh;
   height: auto;
-  background-color: orange;
+  background-color: #f8f9fa;
 }
 
 .col-md-6.social-img {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  filter: drop-shadow(3px 3px rgba(0, 0, 0, 0.3));
 }
 
 .col-md-6.social-accounts {
@@ -47,6 +50,7 @@ img {
   margin: 0;
   justify-content: center;
   align-items: end;
+  filter: drop-shadow(2px 2px rgba(0, 0, 0, 0.3));
 }
 
 .fa-brands:hover {
@@ -73,6 +77,28 @@ img {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease-in-out;
   padding: 1%;
+}
+
+div > label {
+  font-size: large;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.container.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+form > div {
+  max-width: 200px;
+}
+
+.textbox > textarea {
+  height: 150px;
+  resize: none;
 }
 
 @media (max-width: 768px) {

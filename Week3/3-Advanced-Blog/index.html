@@ -59,7 +59,7 @@
                 <a class="nav-link" href="#social">Social</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#contact">Contact</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -93,6 +93,7 @@
       </div>
       <!-- Jumbotron End -->
     </header>
+    <!-- Home Start -->
     <section class="container home">
       <!-- Posts Start-->
       <div id="posts" class="row">
@@ -178,7 +179,10 @@
         </article>
       </div>
       <!-- Posts End-->
+      <!-- Social Start -->
     </section>
+    <!-- Home End -->
+    <!-- Social Start -->
     <section id="social" class="container-fluid social">
       <article class="row social">
         <div class="col-md-6 social-img">
@@ -197,11 +201,65 @@
         </div>
       </article>
     </section>
+    <!-- Social End -->
+    <!-- Contact Start -->
+    <section id="contact" class="container contact">
+      <article class="row justify-content-center">
+        <div class="col-md-6">
+          <h1 class="mb-5">Contact</h1>
+          <form class="row g-3">
+            <div class="col-md-6">
+              <label for="inputName">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputName"
+                aria-label="First name"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="inputSurname">Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputSurname"
+                aria-label="Last name"
+              />
+            </div>
+            <div class="col-md-12">
+              <label for="inputEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="inputEmail" />
+            </div>
+            <div class="col-md-12">
+              <label for="inputSubject" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="inputSubject" />
+            </div>
+            <div class="textbox col-md-12">
+              <label for="inputTextArea">Message</label>
+              <textarea
+                class="form-control"
+                id="inputTextArea"
+                rows="3"
+              ></textarea>
+            </div>
+            <div class="col-12 mt-5 d-grid gap-2">
+              <button type="submit" class="btn btn-outline-primary btn-lg">
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
+      </article>
+    </section>
+
+    <!-- Contact End -->
+    <!-- Button Up Start -->
     <a href="#home">
       <button class="button-up">
         <i class="fa-solid fa-arrow-up fa-3x"></i>
       </button>
     </a>
+    <!-- Button Up End -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
