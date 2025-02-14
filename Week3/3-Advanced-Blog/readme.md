@@ -1,5 +1,7 @@
 # 📖 Blog Site Project
 
+<h2><a href="https://nazifkaraca.github.io/pages/frontend-projects.html#advanced-blog">🛑 Visit Here to Live View</a></h2>
+
 Welcome to the **Blog Site Project**! This is a simple blog website built using **HTML & CSS**. The project consists of a homepage displaying blog post summaries and individual blog post pages styled consistently with a modern card layout.
 
 ## 🚀 Features
