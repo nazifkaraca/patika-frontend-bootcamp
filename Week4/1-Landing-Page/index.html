@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mamba Design System</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-100 font-sans flex justify-center min-h-screen">
+    <div class="flex flex-col justify-center w-5/6">
+      <!-- Navbar -->
+      <div class="flex justify-center">
+        <nav
+          class="bg-white shadow p-4 mt-5 flex justify-between items-center flex-grow"
+        >
+          <div class="text-purple-700 text-xl font-bold">Mamba</div>
+          <div class="flex space-x-4 items-center">
+            <a href="#" class="text-gray-600">Link</a>
+            <a href="#" class="text-gray-600">Link</a>
+            <a href="#" class="text-gray-600">Link</a>
+            <button class="bg-purple-600 text-white px-4 py-2 rounded">
+              Sign up
+            </button>
+          </div>
+        </nav>
+      </div>
+      <!-- Hero Section -->
+      <div class="flex justify-center text-center">
+        <section class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div class="p-20 flex flex-col justify-center bg-white rounded-lg">
+            <h1 class="text-4xl font-bold text-purple-700 mb-4">
+              Build it with Mamba
+            </h1>
+            <p class="text-gray-600 mb-6">
+              Modular and versatile. The ultimate design toolkit for savvy
+              technology startups.
+            </p>
+            <input
+              type="text"
+              placeholder="Your name"
+              class="border p-2 mb-2 rounded"
+            />
+            <input
+              type="email"
+              placeholder="Email address"
+              class="border p-2 mb-4 rounded"
+            />
+            <button class="bg-purple-600 text-white px-4 py-2 rounded">
+              Join the waitlist
+            </button>
+          </div>
+
+          <div class="flex flex-grow">
+            <img
+              src="https://picsum.photos/id/22/1000/750"
+              alt="Staircase"
+              class="rounded-lg shadow-md"
+            />
+          </div>
+        </section>
+      </div>
+      <!-- How It Works -->
+      <section class="text-center p-10">
+        <h2 class="text-purple-600 text-sm uppercase mb-2">How it works</h2>
+        <h3 class="text-3xl font-bold mb-8">Building with Mamba is simple</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h4 class="text-xl font-bold">1. Nulla.</h4>
+            <p class="text-gray-600">
+              Nosrum, corrupti blanditiis. Illum, architecto?
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h4 class="text-xl font-bold">2. Accusantium.</h4>
+            <p class="text-gray-600">
+              Vitae saepe atque neque sunt eius dolor veniam alias debitis?
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h4 class="text-xl font-bold">3. Maxime.</h4>
+            <p class="text-gray-600">
+              Expedita temporibus culpa reprehenderit doloribus consectetur
+              odio!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Image and Testimonial -->
+      <section class="p-10 grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div>
+          <img
+            src="https://picsum.photos/id/29/600/400"
+            alt="City Lights"
+            class="rounded-lg shadow-md"
+          />
+        </div>
+        <div class="flex flex-col justify-center">
+          <blockquote class="text-xl italic text-gray-600 mb-4">
+            "Et, dignissimos obcaecati. Recusandae praesentium doloribus vitae?
+            Rem, unde atque mollitia!"
+          </blockquote>
+          <p class="text-gray-500">Leroy Jenkins<br />CEO of Company Co.</p>
+        </div>
+      </section>
+
+      <!-- Create With Us -->
+      <section class="mt-10">
+        <div class="bg-white rounded-lg shadow p-10 space-y-4 mb-4">
+          <h3 class="text-3xl text-gray-600 font-bold">Create with us</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor ab
+            veniam temporibus ipsum, quasi eveniet! Quis ipsam corporis dolor
+            sunt, a reprehenderit? Animi fugiat libero repellat ullam veniam
+            nihil accusamus, non alias nulla. Aut, at libero voluptates error
+            eligendi sed odio omnis ipsam illo corrupti necessitatibus
+            distinctio officia culpa obcaecati.
+          </p>
+        </div>
+      </section>
+
+      <!-- Curating a workplace -->
+      <section class="mt-10">
+        <div class="bg-white flex shadow rounded-lg">
+          <div class="w-4/6">
+            <img src="https://picsum.photos/id/29/1000/500" alt="" />
+          </div>
+          <div class="flex flex-col justify-between px-5 py-4">
+            <div>
+              <span class="bg-purple-600 text-white px-3 p-1 rounded-xl"
+                >Business</span
+              >
+              <h2 class="text-2xl font-bold my-3">
+                Curating a workplace that inspires a teamwork
+              </h2>
+            </div>
+            <p>
+              February 21, 2025 <br />
+              By Nazif Karaca
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-wrap md:flex-nowrap mt-3">
+          <div
+            class="bg-white w-full sm:w-full md:w-2/6 mx-3 rounded-lg p-5 my-3"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis a
+            quasi eaque nihil deserunt
+          </div>
+          <div
+            class="bg-white w-full sm:w-full md:w-2/6 mx-3 rounded-lg p-5 my-3"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis a
+            quasi eaque nihil deserunt
+          </div>
+          <div
+            class="bg-white w-full sm:w-full md:w-2/6 mx-3 rounded-lg p-5 my-3"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis a
+            quasi eaque nihil deserunt
+          </div>
+        </div>
+      </section>
+
+      <!-- Final Image -->
+      <section class="mt-10">
+        <div
+          class="flex flex-col bg-white rounded-lg justify-content items-center p-10 py-20 shadow"
+        >
+          <div class="flex flex-col justify-center items-center mb-10">
+            <h3 class="text-2xl md:text-4xl pb-3 font-bold">
+              Our team is here to help you.
+            </h3>
+            <a href="">Meet our crew &gt;</a>
+          </div>
+          <div>
+            <img src="https://picsum.photos/1800/500?grayscale" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="mt-10">
+        <div class="bg-white rounded-lg flex justify-between p-5 mb-2">
+          <div>
+            <span class="font-bold">Mamba</span>
+          </div>
+          <div>
+            <a href=""><i class="fa-solid fa-envelope"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
