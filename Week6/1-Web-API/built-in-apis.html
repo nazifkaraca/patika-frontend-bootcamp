@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Web History API</h2>
+    <button onclick="setItem()">Set Item</button>
+    <button onclick="getItem()">Get Item</button>
+    <button onclick="removeItem()">Remove Item</button>
+    <script>
+      // Web History API
+      function back() {
+        history.back();
+      }
+
+      function go() {
+        history.go(-2);
+      }
+
+      function forward() {
+        history.forward();
+      }
+
+      // Web Storage API
+      function setItem() {
+        // Local Storage
+        localStorage.setItem("name", "Cenk Taner");
+        // Session Storage
+        sessionStorage.setItem("name", "Genç Osman Yavaş");
+      }
+
+      function getItem() {
+        // Local Storage
+        console.log("Local:", localStorage.getItem("name"));
+        // Session Storage
+        console.log("Session:", sessionStorage.getItem("name"));
+      }
+
+      function removeItem() {
+        // Local Storage
+        localStorage.removeItem("name");
+        // Session Storage
+        sessionStorage.removeItem("name");
+      }
+
+      // Web Fetch API
+      function fetchUsers() {
+        fetch("https://jsonplaceholder.typicode.com/users")
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (users) {
+            console.log("users", users);
+          });
+      }
+
+      function sayHi() {
+        const notification = new Notification("Merhaba Aras!");
+      }
+
+      function notifyMe() {
+        if ("Notification" in window) {
+          if (Notification.permission === "granted") {
+            sayHi();
+          } else if (Notification.permission === "denied") {
+            console.log("Bildirim izni verilmedi.");
+          } else {
+            Notification.requestPermission().then((permission) => {
+              if (permission === "granted") {
+                sayHi();
+              }
+            });
+          }
+        } else {
+          console.log("Notification API desteklenmiyor.");
+        }
+      }
+    </script>
+  </body>
+</html>
