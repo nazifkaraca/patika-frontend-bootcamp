@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <title>Yapılacaklar Listesi</title>
+  </head>
+  <body>
+    <div class="mr-1" style="position: relative">
+      <div style="position: absolute; top: 0; right: 0">
+        <div
+          id="liveToast"
+          class="toast success hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+          data-delay="4000"
+        >
+          <div>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="toast"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">Listeye eklendi.</div>
+        </div>
+      </div>
+    </div>
+    <div class="mr-1" style="position: relative">
+      <div style="position: absolute; top: 0; right: 0">
+        <div
+          id="liveToast"
+          class="toast error hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+          data-delay="4000"
+        >
+          <div>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="toast"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="header">
+        <img
+          src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png"
+          class="mb-1"
+          alt=""
+        />
+        <h2>Yapılacaklar Listesi</h2>
+        <input type="text" id="task" placeholder="Bugün ne yapacaksın?" />
+        <span onclick="newElement()" id="liveToastBtn" class="button"
+          >Ekle</span
+        >
+      </div>
+
+      <ul id="list"></ul>
+
+      <script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"
+      ></script>
+      <script>
+        // Load stored elements in the local storage
+        document.addEventListener("DOMContentLoaded", loadItems);
+
+        // Add element
+        function newElement() {
+          if (!checkValidity("task")) return; // Validate input
+
+          const inputField = document.getElementById("task");
+          const inputText = document.getElementById("task").value.trim();
+
+          addItemToDOM(inputText);
+          saveItem(inputText); // Save to local storage
+
+          inputField.value = "";
+
+          showToast("Action added to the list.");
+        }
+
+        // Add Item to DOM
+        function addItemToDOM(text) {
+          let ul = document.getElementById("list");
+          let li = document.createElement("li");
+          li.textContent = text;
+
+          // Close button
+          let closeBtn = document.createElement("span");
+          closeBtn.className = "close";
+          closeBtn.textContent = " x ";
+          closeBtn.style.cursor = "pointer";
+          closeBtn.style.float = "right";
+
+          closeBtn.onclick = function () {
+            let confirmDelete = confirm(
+              "Are you sure you want to delete this item?"
+            );
+            if (confirmDelete) {
+              li.remove();
+              removeItem(text); // Remove from local storage
+              showToast("Element successfully deleted.");
+            }
+          };
+
+          li.appendChild(closeBtn);
+          ul.appendChild(li);
+        }
+
+        // Save to Local Storage
+        function saveItem(text) {
+          let items = JSON.parse(localStorage.getItem("tasks")) || []; // Get current list
+          items.push(text);
+          localStorage.setItem("tasks", JSON.stringify(items)); // Save updated list
+        }
+
+        // Load from Local Storage
+        function loadItems() {
+          let items = JSON.parse(localStorage.getItem("tasks")) || [];
+          items.forEach((item) => addItemToDOM(item));
+        }
+
+        // Remove from Local Storage
+        function removeItem(text) {
+          let items = JSON.parse(localStorage.getItem("tasks")) || [];
+          items = items.filter((item) => item !== text); // Remove specific item
+          localStorage.setItem("tasks", JSON.stringify(items));
+        }
+
+        // Mark checked
+        document.addEventListener("click", function (event) {
+          if (event.target.tagName === "LI") {
+            event.target.classList.toggle("checked");
+          }
+        });
+
+        // Check validity of the new element
+        function checkValidity(id) {
+          if (typeof id !== "string") {
+            console.log("Id should be string.");
+            return false;
+          }
+
+          const inputText = document.getElementById(id).value;
+
+          if (inputText === "") {
+            showToast("Cannot insert an empty value into list!");
+            return false;
+          }
+
+          return true;
+        }
+
+        // Show toast notification
+        function showToast(message) {
+          let toastEl = document.getElementById("liveToast");
+          let toastBody = toastEl.querySelector(".toast-body");
+
+          if (message) {
+            toastBody.textContent = message;
+          }
+
+          let toast = new bootstrap.Toast(toastEl, { delay: 3000 });
+          toast.show();
+        }
+      </script>
+    </div>
+  </body>
+</html>
