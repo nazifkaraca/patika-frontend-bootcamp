@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f1f5f8;
+  font-family: "Zilla Slab", serif;
+}
+
+h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  text-align: center;
+  color: #ff6a23;
+}
+
+/* Menü düzeni */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Menü öğeleri */
+.menu-items {
+  display: flex;
+  width: 48%; /* İki sütun düzeni */
+  align-items: center;
+  padding: 15px;
+}
+
+/* Görseller */
+.photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+/* Eğer resim yüklenmezse varsayılan görsel ekle */
+.photo[onerror] {
+  content: url("fallback-image.jpg"); /* Alternatif görsel */
+}
+
+/* Menü başlığı */
+.menu-title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
+
+/* Menü açıklaması */
+.menu-text {
+  padding-top: 10px;
+}
+
+/* Fiyat ve başlık renkleri */
+h4 {
+  color: #e00a00;
+  font-size: 1.2rem;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 768px) {
+  .menu-items {
+    width: 100%; /* Mobilde tek sütun olsun */
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .photo {
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+}
