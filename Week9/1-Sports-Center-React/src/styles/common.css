@@ -1,0 +1,50 @@
+/* Set common variables */
+:root {
+  margin: 0;
+  padding: 0;
+  --navy-blue: rgb(53, 85, 146);
+  --lighter-blue: #f1f8ff;
+  --faded-gray: #4e4e4e;
+  --darker-gray: #4f4f4f;
+  --lighter-gray: #c5c4c4;
+  --gold-yellow: rgb(243, 156, 18);
+}
+
+.navy-color {
+  color: var(--navy-blue);
+}
+
+a.navy-color {
+  background-color: var(--navy-blue);
+  border-color: none;
+}
+
+span.navy-color {
+  background-color: var(--navy-blue);
+}
+
+/* Create a -yellow line */
+.one-line {
+  display: block;
+  margin: 0 auto;
+  background-color: var(--gold-yellow);
+  width: 75px;
+  height: 10px;
+  border-radius: 20px;
+}
+
+.faded-gray {
+  color: var(--faded-gray);
+}
+
+.justify-text {
+  text-align: justify;
+}
+
+.w-65 {
+  width: 65%;
+}
+
+.w-85 {
+  width: 85%;
+}

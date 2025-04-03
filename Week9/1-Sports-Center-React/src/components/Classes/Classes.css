@@ -1,0 +1,84 @@
+/* A triangle for class button selection */
+#individual-classes a {
+  position: relative;
+  background-color: var(--navy-blue);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Add background and shadow in case of hover */
+#individual-classes a:hover {
+  background-color: var(--gold-yellow);
+  box-shadow: 0 0 15px rgba(243, 156, 18, 0.7);
+}
+
+/* Highlight active class button  */
+.tab-button.active {
+  background-color: var(--gold-yellow) !important;
+  box-shadow: 0 0 15px rgba(243, 156, 18, 0.7);
+}
+
+/* Show triangle below class button in case of hover */
+#individual-classes a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: var(--gold-yellow) transparent transparent transparent;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Triangle is hidden initially */
+#individual-classes a::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent transparent; /* Başlangıçta şeffaf */
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+#yoga h2 {
+  color: var(--darker-gray);
+}
+
+#classes .tab-content {
+  display: none !important;
+}
+
+#classes .tab-content.active {
+  display: flex !important;
+}
+
+/* Implement background for classes section */
+.bg-shape {
+  background-color: #f4f4f4;
+  position: relative;
+  padding-top: 5rem;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* Create -white space in background */
+#classes.bg-shape::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background-color: white;
+  clip-path: polygon(0 0, 70% 0, 97% 100%, 0 100%, 0% 50%);
+  z-index: -1;
+}

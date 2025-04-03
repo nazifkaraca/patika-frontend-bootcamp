@@ -1,0 +1,27 @@
+/* Set info carts in the homepage */
+#info-cards {
+  background-color: #f1f8ff;
+}
+
+.info-card {
+  background-color: white;
+  text-align: center;
+  padding: 20px 30px;
+  margin: 20px;
+  border-radius: 10px; /* Kenarları yuvarlat */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.info-card span {
+  font-weight: bold;
+  color: var(--navy-blue);
+}
+
+.info-card p {
+  font-weight: 600;
+}

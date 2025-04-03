@@ -1,0 +1,117 @@
+#trainers {
+  background-color: var(--lighter-blue);
+}
+
+/* Set image properties in trainers */
+.trainer-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image Top Line */
+.trainer-wrapper::before {
+  content: "";
+  position: absolute;
+  height: 4%;
+  width: 45%;
+  background-color: var(--navy-blue);
+  top: -4%;
+  z-index: 1;
+}
+
+/* Image Right Line */
+.trainer-wrapper .side-box::after {
+  content: "";
+  position: absolute;
+  rotate: 90deg;
+  height: 4%;
+  width: 45%;
+  background-color: var(--navy-blue);
+  top: 50%;
+  right: -24%;
+  z-index: 1;
+}
+
+/* Image Bottom Line */
+.trainer-wrapper::after {
+  content: "";
+  position: absolute;
+  height: 4%;
+  width: 45%;
+  background-color: var(--navy-blue);
+  bottom: -4%;
+  z-index: 1;
+}
+
+/* Image Left Line */
+.trainer-wrapper .side-box::before {
+  content: "";
+  position: absolute;
+  rotate: 90deg;
+  height: 4%;
+  width: 45%;
+  background-color: var(--navy-blue);
+  top: 50%;
+  left: -24%;
+  z-index: 1;
+}
+
+/* Set change to right in case of hover */
+.trainer-wrapper:hover .side-box::after {
+  width: 75%;
+  right: -40.8%;
+}
+
+/* Set change to bottom in case of hover */
+.trainer-wrapper:hover::after {
+  width: 75%;
+  bottom: -4.6%;
+}
+
+/* Set change to left in case of hover */
+.trainer-wrapper:hover .side-box::before {
+  width: 75%;
+  left: -40.6%;
+}
+
+/* Set trainer image */
+.trainer-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Set info card properties */
+.trainer-info {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  width: 80%;
+  background: rgba(53, 85, 146, 0.7);
+  color: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  transition: transform 0.4s ease-in-out;
+  z-index: -1;
+}
+
+/* Set border in case of hover */
+.trainer-wrapper:hover {
+  border: solid;
+  border-radius: 12px;
+  border-width: 2px;
+  border-color: var(--gold-yellow);
+  z-index: 2;
+}
+
+/* Show trainer card when hover */
+.trainer-wrapper:hover .trainer-info {
+  z-index: 1;
+}

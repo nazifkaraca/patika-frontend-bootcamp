@@ -1,0 +1,54 @@
+/* Set product wrapper properties */
+.product-wrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+/* Arrange shopping cart icon size */
+.add-cart i {
+  font-size: 18px;
+  order: 0;
+}
+
+/* Set card properties for every product */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-body p {
+  margin-top: auto;
+}
+
+/* Set add card text and add cart icon */
+.add-cart {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px 0;
+}
+
+/* Define change in case of hover */
+.product-container:hover .product-wrapper {
+  filter: blur(5px);
+}
+
+.product-container .product-wrapper:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  filter: blur(0);
+}

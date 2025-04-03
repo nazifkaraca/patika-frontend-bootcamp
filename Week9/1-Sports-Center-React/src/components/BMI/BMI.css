@@ -1,0 +1,23 @@
+/* ----------------- BMI Calculator ----------------- */
+
+/* Set BMI image */
+#bmi img {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+/* Set BMI indicator */
+#bmi-indicator {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+/* Show BMI indicator after BMI calculation */
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid var(--gold-yellow);
+  position: relative;
+}

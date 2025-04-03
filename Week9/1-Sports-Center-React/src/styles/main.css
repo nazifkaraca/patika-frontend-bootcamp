@@ -1,0 +1,10 @@
+@import "./common.css";
+@import "./home.css";
+@import "../components/Hero/Hero.css";
+@import "../components/InfoCards/InfoCards.css";
+@import "../components/Classes/Classes.css";
+@import "../components/BMI/BMI.css";
+@import "../components/Trainers/Trainers.css";
+@import "../components/Purchase/Purchase.css";
+@import "../components/Review/Review.css";
+@import "../components/Contact/Contact.css";
