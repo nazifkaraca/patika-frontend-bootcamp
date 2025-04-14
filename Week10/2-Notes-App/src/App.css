@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: #e9e9e9;
+}
+
+.app {
+  text-align: center;
+  padding: 40px 10px;
+}
+
+h1 {
+  font-size: 28px;
+  color: #444;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.search-bar {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  padding: 10px 15px;
+  width: fit-content;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  font-size: 16px;
+  outline: none;
+}
+
+.note-input {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto 30px;
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+  border: none;
+  resize: none;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  color: #333;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.color-options {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 5px;
+  margin-bottom: 10px;
+  gap: 8px;
+}
+
+.color {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  outline: 2px solid transparent;
+}
+
+.color.selected {
+  outline: 2px solid #555;
+}
+
+.add-btn {
+  padding: 10px 25px;
+  background-color: #2ecc71;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-btn:hover {
+  background-color: #27ae60;
+}
+
+.notes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.note {
+  padding: 12px 20px;
+  border-radius: 6px;
+  min-width: 100px;
+  font-weight: bold;
+  color: #222;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
