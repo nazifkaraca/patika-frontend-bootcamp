@@ -1,20 +1,40 @@
 import { useState } from "react";
 import "./App.css";
 
-const colors = ["#f06292", "#ba68c8", "#ffd54f", "#4fc3f7", "#aed581"];
+// Renk seçenekleri
+const colors = ["#ec619b", "#c774d7", "#f7d154", "#63c9f9", "#b4dc82"];
 
 function App() {
+  // Tüm notları tutacağımız dizi
   const [notes, setNotes] = useState([]);
+
+  // Yazılan notun içeriği
   const [noteText, setNoteText] = useState("");
+
+  // Kullanıcının seçtiği renk
   const [selectedColor, setSelectedColor] = useState(colors[0]);
+
+  // Arama kutusuna yazılan metin
   const [searchTerm, setSearchTerm] = useState("");
 
+  // Not ekleme fonksiyonu
   const addNote = () => {
-    if (!noteText.trim()) return;
-    setNotes([...notes, { text: noteText, color: selectedColor }]);
+    if (!noteText.trim()) return; // boşsa ekleme
+
+    // Yeni not objesi oluştur
+    const newNote = {
+      text: noteText,
+      color: selectedColor,
+    };
+
+    // notes dizisine ekle
+    setNotes([...notes, newNote]);
+
+    // textarea'yı temizle
     setNoteText("");
   };
 
+  // Arama filtresi
   const filteredNotes = notes.filter((note) =>
     note.text.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -22,6 +42,8 @@ function App() {
   return (
     <div className="app">
       <h1>NotesApp</h1>
+
+      {/* Arama kutusu */}
       <input
         className="search"
         type="text"
@@ -29,12 +51,16 @@ function App() {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
+
       <div className="note-input">
+        {/* Not yazma alanı */}
         <textarea
           placeholder="Enter your note here..."
           value={noteText}
           onChange={(e) => setNoteText(e.target.value)}
         />
+
+        {/* Renk seçenekleri */}
         <div className="color-options">
           {colors.map((color) => (
             <button
@@ -45,10 +71,14 @@ function App() {
             />
           ))}
         </div>
+
+        {/* Not ekleme butonu */}
         <button className="add-btn" onClick={addNote}>
           ADD
         </button>
       </div>
+
+      {/* Notların listelendiği alan */}
       <div className="notes">
         {filteredNotes.map((note, idx) => (
           <div
