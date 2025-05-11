@@ -2,6 +2,8 @@
 
 A modern and responsive **React + TypeScript** app that explores the legendary starships from the Star Wars universe using the [SWAPI](https://swapi.dev/) API.
 
+![Star Wars](public/dark-side.jpg)
+
 ---
 
 ## ✨ Features
@@ -20,8 +22,6 @@ A modern and responsive **React + TypeScript** app that explores the legendary s
 ---
 
 ## 📸 Preview
-
-![Star Wars](public/dark-side.jpg)
 
 ![Star Wars Explorer](image.png)
 
